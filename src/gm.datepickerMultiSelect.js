@@ -21,9 +21,10 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
+var MODULE_NAME = 'gm.datepickerMultiSelect'
 
-(function() {
-	angular.module('gm.datepickerMultiSelect', ['ui.bootstrap'])
+;(function(angular) {
+	angular.module(MODULE_NAME, ['ui.bootstrap'])
 	.config(['$provide', '$injector', function($provide, $injector) {
 		var delegate = function($delegate) {
 			var directive = $delegate[0];
@@ -71,10 +72,10 @@ SOFTWARE.
 
 			return $delegate;
 		}
-		
+
 		if ($injector.has('daypickerDirective'))
 			$provide.decorator('daypickerDirective', ['$delegate', delegate]);
-		
+
 		if ($injector.has('uibDaypickerDirective'))
 			$provide.decorator('uibDaypickerDirective', ['$delegate', delegate]);
 	}])
@@ -134,4 +135,6 @@ SOFTWARE.
 			}
 		}
 	});
-})();
+})(window.angular)
+
+module.exports = MODULE_NAME

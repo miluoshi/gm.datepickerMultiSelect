@@ -2,7 +2,7 @@
   "name": "gm.datepickerMultiSelect",
   "version": "1.0.5",
   "description": "AngularJS module to extend UI Bootstrap's Datepicker directive to allow for multiple date selections.",
-  "main": "dist/gm.datepickerMultiSelect.min.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
