@@ -24,7 +24,7 @@ SOFTWARE.
 var MODULE_NAME = 'gm.datepickerMultiSelect'
 
 ;(function(angular) {
-	angular.module(MODULE_NAME, ['ui.bootstrap'])
+	angular.module(MODULE_NAME, ['ui.bootstrap.module.datepickerPopup'])
 	.config(['$provide', '$injector', function($provide, $injector) {
 		var delegate = function($delegate) {
 			var directive = $delegate[0];
